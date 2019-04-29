@@ -13,12 +13,8 @@ class HomeView extends Component {
     };
   }
 
-  componentDidMount() {
-  }
-
-  onFiles = ({filesUploaded}) => {
-    console.log(filesUploaded);
-    this.setState({files:filesUploaded});
+  onFiles = ({ filesUploaded }) => {
+    this.setState({ files: filesUploaded });
   };
 
   render() {
@@ -32,7 +28,6 @@ class HomeView extends Component {
             <ReactFilestack
               apikey={REACT_APP_FILESTACK_API}
               buttonText="Click me"
-              buttonClass="classname"
               onSuccess={this.onFiles}
               preload={true}
             />
@@ -41,7 +36,6 @@ class HomeView extends Component {
           <Col md={12}>
             <h1> Files </h1>
             {files.map((file, i) => {
-              console.log(file);
               return (
                 <Card key={i}>
                   <Media heading className={'m-2'}>
@@ -50,7 +44,7 @@ class HomeView extends Component {
                       <Badge color="secondary">{file.url}</Badge>
                     </h6>
                     <h6>
-                      <img alt={file.fileName} src={file.url} width={100} height={100} />
+                      <img alt={file.fileName} src={file.url} width={100} height={100}/>
                     </h6>
                   </Media>
                 </Card>
