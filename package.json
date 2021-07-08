@@ -19,7 +19,7 @@
     "react-router-dom": "^4.4.0-alpha.6",
     "react-scripts": "^2.1.1",
     "react-toastify": "^4.4.0",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.9.0"
   },
   "scripts": {
     "start": "cross-env react-scripts start",
